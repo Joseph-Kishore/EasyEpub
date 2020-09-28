@@ -10,7 +10,7 @@ $ pip3 install easyepub
 
 # Usage example
 ###### Install and import the library
-```pip3
+```bash
 from easyepub import EasyEpub
 
 easy = EasyEpub("path-to-book/book.epub")
