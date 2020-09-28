@@ -1,14 +1,14 @@
 # EasyEpub
 ### Library for easier translating book pages in png.
 
-# Installation
+# Installation:
 
 ###### Download library using pip
 ```bash
 $ pip3 install easyepub
 ```
 
-# Usage example
+# Usage example:
 ###### Install and import the library
 ```python3
 from easyepub import EasyEpub
@@ -29,5 +29,5 @@ easy.get_cover("path-for-save/cover.png")
 easy.get_content("path-for-save")
 ```
 # 🤝 Contributing
-#### Feel free to contribute. <a href="https://github.com/xcaq/easyepub/graphs/contributors" align=center>Project contributors</a>
+#### <a href="https://github.com/xcaq/spotify-to-vk/graphs/contributors" align=center>Feel free to contribute.</a>
 
