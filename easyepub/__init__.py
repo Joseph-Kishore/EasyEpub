@@ -1,1 +1,1 @@
-from .easyread import *
+from .easyepub import *
