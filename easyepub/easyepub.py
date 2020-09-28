@@ -1,7 +1,7 @@
 import typing
 import zipfile
 from lxml import etree as tree
-from .types.book import Book
+from .models import Book
 from PIL import Image
 import weasyprint
 import os
