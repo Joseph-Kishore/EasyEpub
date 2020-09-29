@@ -1,7 +1,5 @@
-import typing
-import os
-
 from PIL import Image
+import os
 
 
 def slice_image(image_path: str) -> None:

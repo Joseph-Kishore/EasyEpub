@@ -97,16 +97,13 @@ class Parser:
             filter(lambda title: title.startswith(COVER_PATH), opened_book.namelist())
         )
         if not book_covers:
-            raise EasyEpubException("Can't find cover in this book")
-
-        # more than one cover?
-        book_cover = book_covers[0]
+            raise EasyEpubException("Can't find a cover in this book.")
 
         directory_name = os.path.dirname(path)
         if directory_name:
             os.makedirs(directory_name, exist_ok=True)
         with open(path, "wb") as book:
-            book.write(opened_book.read(book_cover))
+            book.write(opened_book.read(book_covers[0]))
         opened_book.close()
         return os.path.abspath(path)
 
@@ -135,14 +132,16 @@ class Prepare:
 
         def get_chapter_number(chapter_title_: str):
             return int(chapter_title_.strip(CHAPTER_BASE_TITLE).strip(".html"))
-
-        chapters: typing.List[str] = sorted(
-            filter(
-                lambda file: file.startswith(CHAPTER_BASE_TITLE),
-                os.listdir(content_path),
-            ),
-            key=get_chapter_number,
-        )
+        try:
+            chapters: typing.List[str] = sorted(
+                filter(
+                    lambda file: file.startswith(CHAPTER_BASE_TITLE),
+                    os.listdir(content_path),
+                ),
+                key=get_chapter_number,
+            )
+        except FileNotFoundError:
+            raise EasyEpubException("Directory OEBPS does not exist.")
 
         for chapter in chapters:
             chapter_title = chapter.strip(".html")
@@ -157,4 +156,4 @@ class Prepare:
 
             slice_image(chapter_image_name)
 
-        return f"{chapters_path}/"
+        return chapters_path + "/"

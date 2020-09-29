@@ -9,7 +9,7 @@ $ pip3 install easyepub
 ```
 
 # Usage example:
-###### Install and import the library
+###### Import the library
 ```python3
 from easyepub import EasyEpub
 
@@ -22,11 +22,11 @@ for meta in easy.meta:
 ```
 ###### Retrieving book cover
 ```python3
-easy.get_cover("path-for-save/cover.png")
+easy.get_cover("path-to-directory/cover.png")
 ```
 ###### Retrieving book chapters
 ```python3
-easy.get_content("path-to-directory-for-save")
+easy.get_content("path-to-directory")
 ```
 # 🤝 Contributing
 #### <a href="https://github.com/xcaq/easyepub/graphs/contributors" align=center>Feel free to contribute.</a>
