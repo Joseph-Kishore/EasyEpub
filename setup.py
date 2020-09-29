@@ -9,7 +9,7 @@ except:
 
 setup(
     name="easyepub",
-    version="0.0.7",
+    version="0.0.8",
     description="Library for easier translating book pages in png.",
     long_description=long_description,
     long_description_content_type="text/markdown",
