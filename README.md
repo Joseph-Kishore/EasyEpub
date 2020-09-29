@@ -26,7 +26,7 @@ easy.get_cover("path-for-save/cover.png")
 ```
 ###### Retrieving book chapters
 ```python3
-easy.get_content("path-for-save")
+easy.get_content("path-to-directory-for-save")
 ```
 # 🤝 Contributing
 #### <a href="https://github.com/xcaq/easyepub/graphs/contributors" align=center>Feel free to contribute.</a>
