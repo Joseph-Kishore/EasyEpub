@@ -29,5 +29,5 @@ easy.get_cover("path-for-save/cover.png")
 easy.get_content("path-for-save")
 ```
 # 🤝 Contributing
-#### <a href="https://github.com/xcaq/spotify-to-vk/graphs/contributors" align=center>Feel free to contribute.</a>
+#### <a href="https://github.com/xcaq/easyepub/graphs/contributors" align=center>Feel free to contribute.</a>
 
